@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+
+    padding: 20px 0;
+}
+
+.how-web-works {
+    font-size: 40px;
+    text-align: center;
+}
+
+hr {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.list,
+.list-ordered {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.list ul > li {
+    list-style: none;
+}
+
+.list > li,
+.list-ordered > li {
+    padding-left: 20px;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+
+span {
+    display: block;
+    color: #f38384;
+}
+
+form {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; */
+}
+
+form #first-name,
+form #last-name,
+form #last-name2,
+form #first-name2 {
+    position: relative;
+    width: 50%;
+    margin: 10px;
+}
+
+form label {
+    position: relative;
+    display: block;
+
+    padding-left: 25%;
+}
+
+form button {
+    width: 10%;
+    border-radius: 20px;
+    margin: 5px auto;
+
+    display: block;
+}

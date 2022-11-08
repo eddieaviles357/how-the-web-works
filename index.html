@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Web Works!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="how-web-works">How the Web Works</h1>
+    <hr>
+    <ul class="list">
+        <li>
+            What is HTTP?
+            <span>
+            HTTP stands for Hyper Text Transfer Protocol. I'ts a protocol used by web browsers to send information.
+            </span>
+        </li>
+        <li>
+            What is a URL?
+            <span>
+                URL stands for Uniform Resource Loacator. It is a Srting that has the protocol, Hostname, port, resource, queries.
+            </span>
+            </li>
+        <li>
+            What is DNS?
+            <span>
+                DNS stands for Domain Name System. It is a system to associate human readable names( URL's ) to IP addresses.
+            </span>
+        </li>
+        <li>
+            What is a query string?
+            <span>
+                A query string are additional arguments that can be used by a web server for arguments. It starts with ? then key=value and the & is used to chaing additional queries
+            </span>
+        </li>
+        <li>
+            What are two HTTP verbs and how are they different?
+            <span>
+                2 types of HTTP verbs are GET and PUT. GET verb is used to retrieve read only files and PUT verb is used to modify something.
+            </span>
+        </li>
+        <li>
+            What is an HTTP request?
+            <span>
+                An HTTP request is usually done by a client ( Browser ) and it's used to request files. A request has headers like Accept.
+            </span>
+        </li>
+        <li>
+            What is an HTTP response?
+            <span>
+                An HTTP response is usually sent by a web server to the client an example is JSON data. A response has headers like Status.
+            </span>
+        </li>
+        <li>
+            What is an HTTP header? Give a couple examples of request and response headers you have seen.
+            <span>
+                An HTTP headers are information sent to the client or server about the packet. Some examples are Accept, User-Agent, Content-type.
+            </span>
+        </li>
+        <li>
+            What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+            <span>
+                When a URL is entered in the browser it gets parsed by the browser and figures out what protocol to use, 
+                what hostname address to use, what port to use, what resource to get, what verb to use.
+                It gets sent in a packet with your IP address and destination IP address to the internet, which are a bunch of computers, servers.
+            </span>
+        </li>
+    </ul>
+
+    <h1 class="how-web-works">Part Two</h1>
+    <hr>
+    <ol class="list-ordered">
+        <li>
+            Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word “pirate”.
+            <span>curl -H 'Accept: application/json' 'https://icanhazdadjoke.com/search?term=pirate'</span>
+        </li>
+        <li>
+            Use dig to find what the IP address is for icanhazdadjoke.com
+            <span>fe80::b2ea:bcff:fec3:b2bc%11#53(fe80::b2ea:bcff:fec3:b2bc%11)</span>
+        </li>
+        <li>
+            Make a simple web page and serve it using python3 -m http.server. Visit the page in a browser
+            <span>
+                python3 -m http.server
+                Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+                127.0.0.1 - - [07/Nov/2022 20:56:51] "GET / HTTP/1.1" 200 -</span>
+        </li>
+    </ol>
+    <h1 class="how-web-works">Part Three</h1>
+    <hr>
+    <form class='form1' method="GET">
+        <label for="first-name">Enter First-Name: 
+            <input id='first-name' type="text" placeholder="First Name">
+        </label>
+        <label for="last-name">Enter Last-Name
+            <input id='last-name' type="text" placeholder="Last Name">
+        </label>
+        <button>Submit</button>
+    </form>
+    <hr>
+    <form class='form2' method="POST">
+        <label for="first-name2">Enter First-Name: 
+            <input id='first-name2' type="text" placeholder="First Name2">
+        </label>
+        <label for="last-name2">Enter Last-Name
+            <input id='last-name2' type="text" placeholder="Last Name2">
+        </label>
+        <button>Submit</button>
+    </form>
+</body>
+<script src="app.js"></script>
+</html>
